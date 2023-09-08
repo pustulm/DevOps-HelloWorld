@@ -1,24 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nodejs-app-deployment
+  name: helloword-app-deployment
   labels:
-    app: nodejs-app
+    app: helloword-app
 spec:
-  replicas: 2  # Adjust the number of replicas as needed
+  replicas: 2  
   selector:
     matchLabels:
-      app: nodejs-app
+      app: helloword-app
   template:
     metadata:
       labels:
-        app: nodejs-app
+        app: helloword-app
     spec:
       containers:
-        - name: nodejs-app
-          image: michalp96/helloworld-dev:latest  # Replace with your Docker image 
-          ports:
-            - containerPort: 3000  # Adjust the port if your Node.js app listens on a different port
+        - name: helloword-app
+          image: michalp96/helloworld-dev:latest  
           resources:
             requests:
               memory: "64Mi"
@@ -26,16 +24,18 @@ spec:
             limits:
               memory: "128Mi"
               cpu: "500m"
+          ports:
+            - containerPort: 3000 
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: nodejs-app-service
+  name: helloword-app-service
 spec:
   selector:
-    app: nodejs-app
+    app: helloword-app
   ports:
     - protocol: TCP
-      port: 80  # External port for accessing the service
-      targetPort: 3000  # Port on the pods where your Node.js app is running
-  type: LoadBalancer  # Use LoadBalancer for cloud deployments (e.g., AWS, GCP), or NodePort for on-premises
+      port: 80 
+      targetPort: 3000 
+  type: LoadBalancer  
