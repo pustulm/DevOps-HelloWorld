@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: helloword-app-deployment
+  name: helloworld-app-deployment
   labels:
-    app: helloword-app
+    app: helloworld-app
 spec:
   replicas: 2  
   selector:
     matchLabels:
-      app: helloword-app
+      app: helloworld-app
   template:
     metadata:
       labels:
-        app: helloword-app
+        app: helloworld-app
     spec:
       containers:
-        - name: helloword-app
+        - name: helloworld-app
           image: michalp96/helloworld-dev:latest  
           resources:
             requests:
@@ -30,10 +30,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: helloword-app-service
+  name: helloworld-app-service
 spec:
   selector:
-    app: helloword-app
+    app: helloworld-app
   ports:
     - protocol: TCP
       port: 80 
