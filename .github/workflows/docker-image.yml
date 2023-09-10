@@ -31,3 +31,11 @@ jobs:
         with:
           push: true
           tags: michalp96/helloworld-dev:latest
+
+      - 
+        name: Deploy to Kubernetes
+        env:
+          KUBE_CONFIG_DATA: ${{ secrets.KUBE_CONFIG_DATA }}
+        run: |
+          echo "$KUBE_CONFIG_DATA" | base64 -d > kubeconfig.yml
+          kubectl apply -f kubernetesdeploy.yml --kubeconfig=kubeconfig.yml
