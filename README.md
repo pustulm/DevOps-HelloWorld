@@ -40,11 +40,24 @@ Simple project where my main goal was create a deployment for a node.js app whic
 
   CMD [ "node", "app.js" ]
   ```
-4. *CREATE GITHUB ACTION WORKFLOW*
+4. *CREATE GITHUB REPO AND ADD CREDENTIALS*
    
   First create a new repo for pulled node.js app or fork my repo.
-  Then go to the github actions tab and create a new workflow.
   
+  Then go to settings tabs and choose Secret and Variables->Actions.
+  Add two repository token. First one call
+  ```
+  DOCKERHUB_TOKEN
+  ```
+  which one will store token that your create on DockerHub website.
+  The second one should be called
+  ```
+  DOCKERHUB_USERNAME
+  ```
+  which one will store your DockerHub username.
+
+4. *CREATE GITHUB ACTION WORKFLOW*
+
   ```
   name: Hello World CI/CD
 
@@ -90,3 +103,6 @@ jobs:
          run:
           kubectl apply -f kubernetesdeploy.yml
   ```  
+
+
+***-SUMMARIES OF THE PROJECT-***
