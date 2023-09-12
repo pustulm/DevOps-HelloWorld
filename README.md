@@ -40,9 +40,11 @@ Simple project where my main goal was create a deployment for a node.js app whic
 
   CMD [ "node", "app.js" ]
   ```
-4. *CREATE GITHUB ACTION WORKFLOW*  
+4. *CREATE GITHUB ACTION WORKFLOW*
+   
   First create a new repo for pulled node.js app or fork my repo.
   Then go to the github actions tab and create a new workflow.
+  
   ```
   name: Hello World CI/CD
 
