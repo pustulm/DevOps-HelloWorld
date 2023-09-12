@@ -76,7 +76,7 @@ jobs:
           uses: docker/build-push-action@v4
           with:
             push: true
-            tags: michalp96/helloworld-dev:latest
+            tags: your-dockerhub-username/image-name
   job2:
       runs-on: ubuntu-latest
       name: build Node.js app and deploy to Minikube
