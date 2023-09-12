@@ -40,7 +40,7 @@ jobs:
          run: kubectl get pods -A
       -  name: Deploy to minikube
          run:
-          kubectl apply -f deploymentkubernetes.yml
+          kubectl apply -f kubernetesdeploy.yml
       -  name: Test service URLs
          run: |
              minikube service list
