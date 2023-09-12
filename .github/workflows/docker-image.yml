@@ -41,7 +41,4 @@ jobs:
       -  name: Deploy to minikube
          run:
           kubectl apply -f kubernetesdeploy.yml
-      -  name: Test service URLs
-         run: |
-             minikube service list
-             minikube service helloworld-app-service --url
+  
