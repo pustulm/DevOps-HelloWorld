@@ -105,4 +105,4 @@ jobs:
   ```  
 
 
-***-SUMMARIES OF THE PROJECT-***
+***-SUMMARY OF THE PROJECT-***
