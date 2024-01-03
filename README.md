@@ -8,7 +8,7 @@ Simple project where my main goal was create a deployment for a Node.js app whic
 
 - Docker
 - Node.js
-- Kubernetes (minikube)=
+- Kubernetes (minikube)
 - Github Actions
 
 ### **-STEPS-**
