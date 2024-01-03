@@ -1,18 +1,17 @@
- DevOps-HelloWorld
+# DevOps-HelloWorld
 
-***-OVERVIEW OF PROJECT-***
+### **-OVERVIEW OF PROJECT-**
 
-Simple project where my main goal was create a deployment for a node.js app which prints hello world in console. 
+Simple project where my main goal was create a deployment for a Node.js app which prints "hello world" in console. 
 
-***-TECHNOLOGIES-***
+### **-TECHNOLOGIES-**
 
 - Docker
 - Node.js
-- Kubernetes
-- Minikube
+- Kubernetes (minikube)=
 - Github Actions
 
-***-STEPS-***
+### **-STEPS-**
 
 1. *PREREQUISITES*
    
@@ -104,5 +103,8 @@ jobs:
           kubectl apply -f kubernetesdeploy.yml
   ```  
 
+***IN WORK***
 
-***-SUMMARY OF THE PROJECT-***
+### **-SUMMARY OF THE PROJECT-**
+
+The main difference from [my previous project](https://github.com/pustulm/timelog) was the use of GithubActions in place of Jenkins, which I had previously used. Other than that, the project has no major differences. It was certainly a good exercise to solidify the processes that are essential in DevOps work, even though they are simple. It's more of a project that I don't plan to develop further in any way, just a consolidation of what I did previously with additional use of Github Actions. In other projects, he plans to develop other tools for Devops work.
